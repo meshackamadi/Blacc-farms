@@ -64,13 +64,8 @@ const Header: React.FC = () => {
         { label: "Contact", href: "/contact" },
     ];
 
-    const topBarContent = {
-        announcement: "🚚 Free delivery on orders over $50 within 20 miles!",
-        phone: "+1 (555) 123-4567",
-    };
-
     return (
-        <header className="sticky top-0 z-40 w-full bg-cream border-b border-wheat shadow-lg">
+        <header className="fixed top-0 left-0 w-full z-50 bg-white border-b border-wheat shadow-lg">
             <div className="container mx-auto px-6 lg:px-15">
                 <div className="flex justify-between items-center py-6">
                     <motion.button
@@ -85,16 +80,15 @@ const Header: React.FC = () => {
                         whileTap={{ scale: 0.95 }}
                         aria-label="Home"
                     >
-                        <FaLeaf className="h-10 w-10 text-sage transition-colors duration-300 hover:text-earth" />
+                        <FaLeaf className="h-10 w-10 text-green-700 transition-colors duration-300" />
                         <h1 className="text-2xl font-bold text-black tracking-widest">Blacc Farms</h1>
                     </motion.button>
 
-                    {/* Desktop Navigation */}
                     <nav className="hidden lg:flex items-center space-x-8">
                         {mainNavItems.map((item) => (
                             <div key={item.label} className="relative">
                                 <motion.button
-                                    className="flex items-center space-x-2 text-black hover:text-green transition-colors duration-300 font-medium"
+                                    className="flex items-center space-x-2 text-black hover:text-green-800 transition-colors duration-300 font-medium cursor-pointer"
                                     onMouseEnter={() => setActiveDropdown(item.hasDropdown ? item.label : null)}
                                     onMouseLeave={() => setActiveDropdown(null)}
                                     whileHover={{ scale: 1.05 }}
@@ -154,28 +148,27 @@ const Header: React.FC = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="text-black hover:text-green transition-colors duration-300"
+                                className="text-green-800 hover:text-black transition-colors duration-300 cursor-pointer"
                             >
                                 <FaSearch className="text-xl" />
                             </motion.button>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="text-black hover:text-green transition-colors duration-300"
+                                className="text-green-800 hover:text transition-colors duration-300 cursor-pointer"
                             >
-                                <FaShoppingCart className="text-xl" />
+                                <FaShoppingCart className="text-xl " />
                             </motion.button>
                             <motion.button
                                 whileHover={{ scale: 1.05 }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-sage text-cream px-6 py-2 rounded-full font-semibold hover:bg-earth transition-all duration-300 shadow-lg"
+                                className="bg-green-800 text-white px-8 py-2 rounded-full font-bold transition-all duration-300 shadow-lg cursor-pointer"
                             >
                                 Shop Now
                             </motion.button>
                         </div>
                     </nav>
 
-                    {/* Mobile Menu Button */}
                     <motion.button
                         className="lg:hidden text-black"
                         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -185,7 +178,6 @@ const Header: React.FC = () => {
                     </motion.button>
                 </div>
 
-                {/* Mobile Menu */}
                 <AnimatePresence>
                     {isMobileMenuOpen && (
                         <motion.div
@@ -193,13 +185,13 @@ const Header: React.FC = () => {
                             animate={{ opacity: 1, height: "auto" }}
                             exit={{ opacity: 0, height: 0 }}
                             transition={{ duration: 0.3 }}
-                            className="lg:hidden bg-white border-t border-wheat/30 overflow-hidden"
+                            className="lg:hidden bg-white border-t border-wheat/30 overflow-hidden absolute w-full left-0"
                         >
                             <div className="px-6 py-6 space-y-4">
                                 {mainNavItems.map((item) => (
                                     <div key={item.label}>
                                         <button
-                                            className="flex items-center justify-between w-full text-blacc font-medium py-2"
+                                            className="flex items-center justify-between w-full text-black font-medium py-2"
                                             onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
                                         >
                                             <span>{item.label}</span>

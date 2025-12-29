@@ -13,7 +13,7 @@ export default {
         clay: '#CD853F',
         earth: '#8B4513',
         green: '#22c55e',
-        blacc: '#2D3748', // Dark gray/black color
+        black: '#2D3748', 
       },
     },
   },
