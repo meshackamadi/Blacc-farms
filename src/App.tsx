@@ -1,6 +1,6 @@
-import Header from "./components/Header";
-import Hero from "./components/Hero";
-import Feature from "./components/Feature";
+import Header from "./components/header";
+import Hero from "./components/hero";
+import Feature from "./components/feature";
 
 function App() {
   return (

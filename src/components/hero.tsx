@@ -64,7 +64,7 @@ const Hero: React.FC = () => {
                             <motion.button
                                 whileHover={{ scale: 1.05, backgroundColor: "#1f5233" }}
                                 whileTap={{ scale: 0.95 }}
-                                className="bg-transparent border-2 border-black text-black px-8 py-4 rounded-full font-bold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3 cursor-pointer"
+                                className="bg-green-800 border-2 border-white text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg hover:shadow-xl flex items-center gap-3 cursor-pointer"
                             >
                                 Schedule a Tour
                                 <FaArrowRight className="text-sm" />
