@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaTractor, FaLeaf, FaAppleAlt, FaSeedling } from "react-icons/fa";
+import { 
+  Sprout, TreePine, Tractor, Carrot
+} from 'lucide-react';
+import { FaArrowRight } from "react-icons/fa";
 
 interface FeatureItem {
   title: string;
@@ -12,22 +15,22 @@ const features: FeatureItem[] = [
   {
     title: "Organic Farming",
     description: "100% organic practices without harmful pesticides",
-    icon: <FaLeaf className="text-green text-xl" />,
+    icon: <TreePine className="text-green text-xl " />,
   },
   {
     title: "Sustainable Methods",
     description: "Eco-friendly techniques that protect our environment",
-    icon: <FaSeedling className="text-green text-xl" />,
+    icon: <Sprout className="text-green text-xl" />,
   },
   {
     title: "Fresh Produce",
     description: "Farm-fresh vegetables delivered to your doorstep",
-    icon: <FaAppleAlt className="text-green text-xl" />,
+    icon: <Carrot className="text-green text-xl" />,
   },
   {
     title: "Expert Farmers",
     description: "Decades of experience in sustainable agriculture",
-    icon: <FaTractor className="text-green text-xl" />,
+    icon: <Tractor className="text-green text-xl" />,
   },
 ];
 
@@ -43,7 +46,7 @@ const Feature: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-4xl md:text-5xl font-bold text-black mb-4">
-              Why Choose <span className="text-green"> Blacc Farms </span> 
+              Why Choose <span className="text-green-800"> Blacc Farms? </span> 
             </h2>
             <p className="text-lg text-earth/80 max-w-2xl mx-auto">
               Discover what makes our sustainable farming practices and fresh produce
@@ -55,7 +58,7 @@ const Feature: React.FC = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
             initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: -50 }}
+            whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
             className="relative"
@@ -64,36 +67,18 @@ const Feature: React.FC = () => {
               <img
                 src="/farmlady.jpg"
                 alt="Blacc farming"
-                className="w-full h-[500px] 0bject-cover"
+                className="w-full h-auto object-cover max-h-[500px] md:max-h-[400px] lg:max-h-[500px]"
               />
               <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               </div>
             </div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="absolute -bottom-6 -right-6 bg-white rounded-2xl p-6 shadow-xl border border-wheat max-w-xs"
-            >
-              <div className="flex items-center gap-3">
-                <div className="bg-sage/10 p-3 rounded-full">
-                 <FaLeaf className="text-green text-xl" />
-                </div>
-                <div>
-                  <div className="text-2xl font-bold text-blacc">25+ Years</div>
-                  <div className="text-sm text-earth/70">Of Farming Excellence</div>
-                </div>
-              </div>
-            </motion.div>
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
             className="space-y-6"
           >
             {features.map((feature, index) => (
@@ -102,10 +87,10 @@ const Feature: React.FC = () => {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ x: 10 }}
-                className="flex items-start gap-4 p-4 rounded-2xl hover:bg-white/50 transition-all duration-300 group">
-                <div className="bg-green/10 p-3 rounded-full group-hover:bg-green/20 transition-colors duration-300">
+                transition={{ duration: 0.3, delay: 0.2 }}
+                whileHover={{ x: 20 }}
+                className="flex items-start gap-4 p-6 rounded-full bg-white shadow-lg hover:shadow-xl hover:bg-white/95 transition-all duration-300 group border border-green/10 cursor-pointer">
+                <div className="bg-green/10 p-3 rounded-full group-hover:bg-green/20 transition-colors duration-300 ">
                   {feature.icon}
                 </div>
                 <div>
@@ -118,8 +103,6 @@ const Feature: React.FC = () => {
                 </div>
               </motion.div>
             ))}
-
-
           </motion.div>
         </div>
       </div>
@@ -130,13 +113,48 @@ const Feature: React.FC = () => {
         className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
         >
         <div className="flex flex-col items-center gap-2">
-            <span className="text-earth/60 text-sm">Explore More</span>
-            <div className="w-6 h-10 border-2 border-earth/30 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-sage rounded-full mt-2"></div>
+            <span className="text-white text-sm">Explore More</span>
+            <div className="w-6 h-10 border-2 border-earth/30 rounded-full text-white flex justify-center">
+              <div className="w-1 h-3 bg-sage rounded-full mt-2"></div>
             </div>
         </div>
       </motion.div>
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-linear-to-t from-cream to-transparent">
+      </div>
+
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mt-16">
+        <div className="text-center ">
+          <h4 className="text-earth/70 mb-2">
+            Started in
+          </h4>
+          <p className="text-5xl font-bold text-black mb-1"> 
+            2025
+          </p>
+        </div>
+        <div className="text-center">
+          <h4 className="text-earth/70 mb-2">
+            Acres Farmed
+          </h4>
+          <p className="text-5xl font-bold text-black mb-1">
+            10+
+          </p>
+        </div>
+        <div className="text-center">
+          <h4 className="text-earth/70">
+            Families Served
+          </h4>
+          <p className="text-5xl font-bold text-black mb-1"> 
+            500+
+          </p>
+        </div>
+        <div className="text-center">
+          <h4 className="text-earth/70">
+            Team Size
+          </h4>
+          <p className="text-5xl font-bold text-black mb-1"> 
+            10
+          </p>
+        </div>
       </div>
     </section>
   );
