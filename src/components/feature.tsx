@@ -1,9 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { 
   Sprout, TreePine, Tractor, Carrot
 } from 'lucide-react';
-import { FaArrowRight } from "react-icons/fa";
 
 interface FeatureItem {
   title: string;
@@ -81,7 +80,7 @@ const Feature: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="space-y-6"
           >
-            {features.map((feature, index) => (
+            {features.map((feature) => (
               <motion.div
                 key={feature.title}
                 initial={{ opacity: 0, y: 20 }}
@@ -89,7 +88,7 @@ const Feature: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.3, delay: 0.2 }}
                 whileHover={{ x: 20 }}
-                className="flex items-start gap-4 p-6 rounded-full bg-white shadow-lg hover:shadow-xl hover:bg-white/95 transition-all duration-300 group border border-green/10 cursor-pointer">
+                className="flex items-start gap-4 p-6 rounded-full bg-white shadow-lg hover:shadow-xl hover:bg-green-800 transition-all duration-300 group border border-green/10 cursor-pointer">
                 <div className="bg-green/10 p-3 rounded-full group-hover:bg-green/20 transition-colors duration-300 ">
                   {feature.icon}
                 </div>

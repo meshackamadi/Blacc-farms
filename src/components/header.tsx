@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaChevronDown, FaShoppingCart, FaPhone, FaUser, FaSearch, FaLeaf, FaBars, FaTimes } from "react-icons/fa";
+import { FaChevronDown, FaShoppingCart, FaSearch, FaLeaf, FaBars, FaTimes } from "react-icons/fa";
 import { GiFarmTractor, GiFruitBowl, GiChicken } from "react-icons/gi";
 
 const Header: React.FC = () => {

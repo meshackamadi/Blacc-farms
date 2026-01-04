@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 
 const About: React.FC = () => {
   const teamMembers = [
     {
-      image: "/team/farmer1.jpg",
+      image: "/chicken.jpg",
       name: "James Blacc",
       role: "Founder & Head Farmer",
-      description: "4th generation farmer with 30+ years experience"
+      description: "4th generation farmer with 25+ years experience"
     },
     {
-      image: "/team/farmer2.jpg",
+      image: "/goats.jpg",
       name: "Sarah Blacc",
       role: "Sustainability Director",
       description: "Specialist in organic farming practices"
     },
     {
-      image: "/team/farmer3.jpg",
+      image: "/products.jpg",
       name: "Michael Chen",
       role: "Farm Operations",
       description: "Expert in livestock and crop management"
@@ -25,17 +25,17 @@ const About: React.FC = () => {
 
   const farmImages = [
     {
-      image: "/farm/sustainable-practices.jpg",
+      image: "/chicken.jpg",
       title: "Sustainable Farming",
       caption: "Our eco-friendly methods preserve the land for future generations"
     },
     {
-      image: "/farm/organic-produce.jpg",
+      image: "/goats.jpg",
       title: "Organic Produce",
       caption: "Chemical-free fruits and vegetables grown with care"
     },
     {
-      image: "/farm/community.jpg",
+      image: "/products.jpg",
       title: "Community Focus",
       caption: "Supporting local families with fresh, healthy food"
     }
@@ -69,7 +69,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-blacc mb-4">
+            <h2 className="text-4xl font-bold text-black mb-4">
               Our <span className="text-green">Farm</span> in Action
             </h2>
             <p className="text-lg text-earth/70 max-w-2xl mx-auto">
@@ -94,7 +94,7 @@ const About: React.FC = () => {
                     alt={item.title}
                     className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
                 <h3 className="text-2xl font-bold text-blacc mb-2">
                   {item.title}

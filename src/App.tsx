@@ -9,6 +9,7 @@ function App() {
       <Header />
       <Hero />
       <Feature />
+      <About />
     </div>
   );
 }

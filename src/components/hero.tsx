@@ -1,22 +1,8 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaArrowRight, FaTractor, FaLeaf, FaAppleAlt, FaSeedling } from "react-icons/fa";
-import { GiCow, GiWheat, GiTomato } from "react-icons/gi";
+import { FaArrowRight} from "react-icons/fa";
 
 const Hero: React.FC = () => {
-    const heroStats = [
-        { icon: <FaLeaf />, value: "100%", label: "Organic Certified", sublabel: "Since 1985" },
-        { icon: <GiCow />, value: "500+", label: "Happy Animals", sublabel: "Free Range" },
-        { icon: <FaSeedling />, value: "50+", label: "Crop Varieties", sublabel: "Seasonal Rotation" },
-        { icon: <GiTomato />, value: "Family", label: "Owned & Operated", sublabel: "4 Generations" },
-    ];
-
-    const featuredProducts = [
-        { name: "Organic Tomatoes", icon: <GiTomato className="text-clay" />, season: "In Season Now" },
-        { name: "Fresh Eggs", icon: <GiCow className="text-sun" />, season: "Daily Collection" },
-        { name: "Artisanal Honey", icon: <FaAppleAlt className="text-earth" />, season: "Limited Batch" },
-    ];
-
     return (
         <section className="relative min-h-screen flex items-center justify-center pt-16" style={{ backgroundImage: `url('/broiler.webp')`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
             <div className="absolute inset-0 z-0 overflow-hidden">
