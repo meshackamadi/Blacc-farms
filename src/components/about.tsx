@@ -4,20 +4,20 @@ import { motion } from "framer-motion";
 const About: React.FC = () => {
   const teamMembers = [
     {
-      image: "/chicken.jpg",
-      name: "James Blacc",
+      image: "/blacc_ceo1.jpg",
+      name: "Joseph Blacc",
       role: "Founder & Head Farmer",
-      description: "4th generation farmer with 25+ years experience"
+      description: "4th generation farmer with 5+ years experience"
     },
     {
-      image: "/goats.jpg",
-      name: "Sarah Blacc",
+      image: "/user.jpg",
+      name: "Pending",
       role: "Sustainability Director",
       description: "Specialist in organic farming practices"
     },
     {
-      image: "/products.jpg",
-      name: "Michael Chen",
+      image: "/user.jpg",
+      name: "Pending",
       role: "Farm Operations",
       description: "Expert in livestock and crop management"
     }
@@ -30,37 +30,44 @@ const About: React.FC = () => {
       caption: "Our eco-friendly methods preserve the land for future generations"
     },
     {
-      image: "/goats.jpg",
+      image: "/products.jpg",
       title: "Organic Produce",
       caption: "Chemical-free fruits and vegetables grown with care"
     },
     {
-      image: "/products.jpg",
-      title: "Community Focus",
-      caption: "Supporting local families with fresh, healthy food"
+      image: "/goats.jpg",
+      title: "Cultivating Health",
+      caption: "Our Priority in Livestock Management"
     }
   ];
   
   return (
-    <section className="py-20 bg-cream">
+    <section className="py-20 relative min-h-screen"
+      style={{
+        backgroundImage: "url('/tractor.jpg')",
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed',
+      }}
+      >
+      <div className="absolute inset-0 bg-black/40"></div>
+
       <div className="container mx-auto px-6 lg:px-15">
-        {/* Bold Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-blacc mb-6">
-            Our <span className="text-green">Story</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
+            Our <span className="text-green drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">Story</span>
           </h1>
-          <p className="text-xl text-earth/80 max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
             For over four generations, the Blacc family has been dedicated to sustainable agriculture, 
             bringing fresh, organic produce to our community while nurturing the land we call home.
           </p>
         </motion.div>
 
-        {/* Three Pictures Section */}
         <div className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -69,10 +76,10 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-black mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
               Our <span className="text-green">Farm</span> in Action
             </h2>
-            <p className="text-lg text-earth/70 max-w-2xl mx-auto">
+            <p className="text-lg text-white max-w-2xl mx-auto drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
               See how we cultivate excellence from soil to harvest
             </p>
           </motion.div>
@@ -96,10 +103,10 @@ const About: React.FC = () => {
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <h3 className="text-2xl font-bold text-blacc mb-2">
+                <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
                   {item.title}
                 </h3>
-                <p className="text-earth/70">
+                <p className="text-white drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
                   {item.caption}
                 </p>
               </motion.div>
@@ -107,7 +114,6 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        {/* Team Section (Optional) */}
         <div>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -116,10 +122,10 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-blacc mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
               Meet Our <span className="text-green">Team</span>
             </h2>
-            <p className="text-lg text-earth/70 max-w-2xl mx-auto">
+            <p className="text-lg text-white max-w-2xl mx-auto drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
               The passionate individuals behind Blacc Farms
             </p>
           </motion.div>
@@ -143,13 +149,13 @@ const About: React.FC = () => {
                     />
                   </div>
                 </div>
-                <h3 className="text-2xl font-bold text-blacc mb-2">
+                <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
                   {member.name}
                 </h3>
-                <p className="text-green font-semibold mb-2">
+                <p className="text-white font-semibold mb-2 drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
                   {member.role}
                 </p>
-                <p className="text-earth/70">
+                <p className="text-white drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
                   {member.description}
                 </p>
               </motion.div>
