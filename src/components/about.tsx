@@ -42,27 +42,24 @@ const About: React.FC = () => {
   ];
   
   return (
-    <section className="py-20 relative min-h-screen"
+    <section className="py-20 relative min-h-screen bg-cover bg-center bg-fixed"
       style={{
-        backgroundImage: "url('/tractor.jpg')",
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundAttachment: 'fixed',
+        backgroundImage: "url('/tractor.jpg')"
       }}
       >
       <div className="absolute inset-0 bg-black/40"></div>
 
-      <div className="container mx-auto px-6 lg:px-15">
+      <div className="container mx-auto px-6 lg:px-15 text-white">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">
-            Our <span className="text-green drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">Story</span>
+          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 [text-shadow:0_0_20px_rgba(255,255,255,0.5)]">
+            Our <span className="text-green [text-shadow:0_0_10px_rgba(72,187,120,0.5)]">Story</span>
           </h1>
-          <p className="text-xl text-white max-w-3xl mx-auto drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             For over four generations, the Blacc family has been dedicated to sustainable agriculture, 
             bringing fresh, organic produce to our community while nurturing the land we call home.
           </p>
@@ -76,10 +73,10 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Our <span className="text-green">Farm</span> in Action
             </h2>
-            <p className="text-lg text-white max-w-2xl mx-auto drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
+            <p className="text-lg text-white max-w-2xl mx-auto">
               See how we cultivate excellence from soil to harvest
             </p>
           </motion.div>
@@ -100,13 +97,14 @@ const About: React.FC = () => {
                     src={item.image}
                     alt={item.title}
                     className="w-full h-64 md:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-linear-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
-                <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
+                <h3 className="text-2xl font-bold text-white mb-2">
                   {item.title}
                 </h3>
-                <p className="text-white drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
+                <p className="text-white">
                   {item.caption}
                 </p>
               </motion.div>
@@ -122,7 +120,7 @@ const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="text-center mb-12"
           >
-            <h2 className="text-4xl font-bold text-white mb-4 drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
+            <h2 className="text-4xl font-bold text-black mb-4 drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
               Meet Our <span className="text-green">Team</span>
             </h2>
             <p className="text-lg text-white max-w-2xl mx-auto drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
@@ -146,16 +144,17 @@ const About: React.FC = () => {
                       src={member.image}
                       alt={member.name}
                       className="w-full h-full object-cover"
+                      loading="lazy"
                     />
                   </div>
                 </div>
                 <h3 className="text-2xl font-bold text-white mb-2 drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
                   {member.name}
                 </h3>
-                <p className="text-white font-semibold mb-2 drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
+                <p className="text-white font-semibold mb-2">
                   {member.role}
                 </p>
-                <p className="text-white drop-shadow-[0_0_10px_rgba(72,187,120,0.5)]">
+                <p className="text-white">
                   {member.description}
                 </p>
               </motion.div>
