@@ -3,6 +3,8 @@ import Hero from "./components/hero";
 import Feature from "./components/feature";
 import About from "./components/about";
 import Video from "./components/video";
+import Testimonials from "./components/testimonials";
+import Footer from "./components/footer";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
       <Feature />
       <About />
       <Video />
+      <Testimonials />
+      <Footer />
     </div>
   );
 }
