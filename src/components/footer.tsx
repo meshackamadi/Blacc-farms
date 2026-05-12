@@ -109,7 +109,7 @@ const MobileColumn: React.FC<{ column: FooterColumn }> = ({ column }) => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-[#f8faf8] border-t border-green/5">
+    <footer className="relative bg-green-800 border-t border-green/ text-white">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(135,169,107,0.04),transparent_50%)]" />
 
       <div className="container mx-auto px-6 lg:px-15 relative">
@@ -125,35 +125,31 @@ const Footer: React.FC = () => {
                 transition={{ duration: 0.5 }}
               >
                 <div className="flex items-center gap-2 mb-4">
-                  <div className="w-9 h-9 rounded-xl bg-linear-to-br from-sage to-green flex items-center justify-center">
-                    <Sprout size={20} className="text-white" />
-                  </div>
-                 <motion.a
-                                         href="/"
-                                         className="flex items-center space-x-3 focus:outline-none cursor-pointer"
-                                         initial={{ opacity: 0, x: -20 }}
-                                         animate={{ opacity: 1, x: 0 }}
-                                         transition={{ duration: 0.5 }}
-                                         whileHover={{ scale: 1.05 }}
-                                         whileTap={{ scale: 0.95 }}
-                                     >
-                                         <div className="bg-green-800 p-2 rounded-full">
-                                             <FaLeaf className="h-6 w-6 text-white" />
-                                         </div>
-                                         <div>
-                                             <h1 className="text-2xl font-bold text-black tracking-tight">Blacc Farms</h1>
-                                             <p className="text-xs text-green-700 font-semibold">Sustainable Organic Farming</p>
-                                         </div>
-                                     </motion.a>
+                  
+                  <motion.a
+                    href="/"
+                    className="inline-block mb-4"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <img
+                      src="dark_logo.jpg"
+                      alt="Blacc Farms Logo"
+                      className="h-20 w-auto object-contain"
+                    />
+                  </motion.a>
                 </div>
                 <p className="text-sm text-earth/60 leading-relaxed max-w-xs">
-                  Sustainable, organic farming committed to bringing the freshest
-                  produce to your table while nurturing the land for future
-                  generations.
+                  Sustainable, organic farming committed to bringing the
+                  freshest produce to your table while nurturing the land for
+                  future generations.
                 </p>
 
                 {/* Social icons */}
-                <div className="flex items-center gap-3 mt-6">
+                <div className="flex items-center gap-3 mt-6 text-black">
                   {socialLinks.map((social) => (
                     <motion.a
                       key={social.label}
@@ -205,13 +201,21 @@ const Footer: React.FC = () => {
 
         {/* Bottom bar */}
         <div className="py-6 border-t border-green/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-earth/50">
-          <p>&copy; {new Date().getFullYear()} Blacc Farms. All rights reserved.</p>
+          <p>
+            &copy; {new Date().getFullYear()} Blacc Farms. All rights reserved.
+          </p>
           <div className="flex items-center gap-4">
-            <a href="#" className="hover:text-green transition-colors duration-200">
+            <a
+              href="#"
+              className="hover:text-green transition-colors duration-200"
+            >
               Privacy Policy
             </a>
             <span className="text-earth/20">|</span>
-            <a href="#" className="hover:text-green transition-colors duration-200">
+            <a
+              href="#"
+              className="hover:text-green transition-colors duration-200"
+            >
               Terms of Service
             </a>
             <span className="text-earth/20">|</span>

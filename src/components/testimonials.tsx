@@ -28,7 +28,7 @@ const testimonials: Testimonial[] = [
     rating: 4,
   },
   {
-    name: "J. Hathaway",
+    name: "Sarah Johnson",
     role: "CSA Member",
     company: "Family of Four",
     content:
