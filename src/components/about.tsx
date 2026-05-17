@@ -43,6 +43,7 @@ const About: React.FC = () => {
   
   return (
     <section 
+      id="story"
       className="py-20 relative min-h-screen bg-cover bg-center bg-fixed"
       style={{
         backgroundImage: "url('/tractor.jpg')"
@@ -68,7 +69,7 @@ const About: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="mb-20">
+        <div id="produce" className="mb-20">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -115,7 +116,7 @@ const About: React.FC = () => {
           </div>
         </div>
 
-        <div>
+        <div id="team" >
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

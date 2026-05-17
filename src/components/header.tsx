@@ -12,34 +12,28 @@ const Header: React.FC = () => {
             {
                 icon: <GiFarmTractor />,
                 label: "Our Story",
-                href: "/about#story",
+                href: "#story",
                 description: "History & Mission of Blacc Farms"
-            },
-            {
-                icon: <FaLeaf />,
-                label: "Sustainability",
-                href: "/about#sustainability",
-                description: "Eco-friendly practices" 
             },
             {
                 icon: <GiChicken />,
                 label: "Our Team",
-                href: "/about#team",
+                href: "#team",
                 description: "Meet the Blacc Farmers"
             },
             {   
                 icon: <FaLeaf />,
                 label: "Certifications",
-                href: "/about#certifications", 
+                href: "#certifications", 
                 description: "Organic & quality standards" 
             },    
         ],
         Products: [
-            { icon: <GiFruitBowl />, label: "Fresh Produce", href: "/products#produce", description: "Fruits & vegetables" },
-            { icon: <GiChicken />, label: "Livestock", href: "/products#livestock", description: "Meat & poultry" },
-            { icon: <FaLeaf />, label: "Dairy & Eggs", href: "/products#dairy", description: "Fresh daily" },
-            { icon: <FaLeaf />, label: "Seasonal Specials", href: "/products#seasonal", description: "What's in season" },
-            { icon: <FaLeaf />, label: "Farm Boxes", href: "/products#boxes", description: "Subscription boxes" },
+            { icon: <GiFruitBowl />, label: "Fresh Produce", href: "#produce", description: "Fruits & vegetables" },
+            { icon: <GiChicken />, label: "Livestock", href: "#produce", description: "Meat & poultry" },
+            { icon: <FaLeaf />, label: "Dairy & Eggs", href: "#produce", description: "Fresh daily" },
+            { icon: <FaLeaf />, label: "Seasonal Specials", href: "#produce", description: "What's in season" },
+            { icon: <FaLeaf />, label: "Farm Boxes", href: "#produce", description: "Subscription boxes" },
         ],
         Visit: [
             { icon: <FaLeaf />, label: "Farm Store", href: "/visit#store", description: "Location & hours" },
@@ -78,8 +72,12 @@ const Header: React.FC = () => {
                         whileHover={{ scale: 1.05 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        <div className="bg-green-800 p-2 rounded-full">
-                            <FaLeaf className="h-6 w-6 text-white" />
+                        <div className="flex items-center">
+                            <img 
+                                src="/blacclogo.jpg" 
+                                alt="Blacc Farms Logo"
+                                className="h-12 w-12 object-contain rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
+                            />
                         </div>
                         <div>
                             <h1 className="text-2xl font-bold text-black tracking-tight">Blacc Farms</h1>
@@ -87,7 +85,6 @@ const Header: React.FC = () => {
                         </div>
                     </motion.a>
 
-                    {/* Desktop Navigation */}
                     <nav className="hidden lg:flex items-center space-x-1">
                         {mainNavItems.map((item) => (
                             <div key={item.label} className="relative group">
@@ -226,7 +223,7 @@ const Header: React.FC = () => {
                                                         href={dropdownItem.href}
                                                         className="flex items-center space-x-3 p-3 rounded-lg hover:bg-green-50 transition-colors duration-300 group"
                                                     >
-                                                        <div className="text-green-700 text-lg">
+                                                        <div className="text-green-7=800 text-lg">
                                                             {dropdownItem.icon}
                                                         </div>
                                                         <div>
