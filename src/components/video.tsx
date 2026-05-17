@@ -18,7 +18,7 @@ const Video: React.FC = () => {
   ];
 
   return (
-    <section className="py-24 bg-linear-to-b from-white via-cream to-white overflow-hidden">
+    <section id="farm tour" className="py-24 bg-linear-to-b from-white via-cream to-white overflow-hidden">
       <div className="container mx-auto px-6 lg:px-15">
         {/* Section Header */}
         <motion.div
@@ -82,7 +82,7 @@ const Video: React.FC = () => {
                 </motion.button>
 
                 {/* Video Duration Badge */}
-                <div className="absolute bottom-6 left-6 bg-black/70 backdrop-blur-md text-white px-4 py-2 rounded-lg z-20 font-semibold">
+                <div id="farm store" className="absolute bottom-6 left-6 bg-black/70 backdrop-blur-md text-white px-4 py-2 rounded-lg z-20 font-semibold">
                   12:45
                 </div>
               </>
@@ -123,7 +123,7 @@ const Video: React.FC = () => {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="flex flex-col items-center text-center p-8 rounded-2xl bg-linear-to-br from-green-50 to-white border border-green-100 hover:border-green-300 hover:shadow-lg transition-all duration-300"
             >
-              <div className="bg-green-100 p-4 rounded-full mb-4 group-hover:bg-green-200 transition-colors duration-300">
+              <div id="certifications" className="bg-green-100 p-4 rounded-full mb-4 group-hover:bg-green-200 transition-colors duration-300">
                 <feature.icon className="w-8 h-8 text-green-700" />
               </div>
               <h4 className="text-xl font-bold text-black mb-2">{feature.label}</h4>
