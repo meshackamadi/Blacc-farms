@@ -48,7 +48,7 @@ const Header: React.FC = () => {
             { icon: <FaLeaf />, label: "U-Pick", href: "/visit#upick", description: "Pick your own" },
         ],
         Learn: [
-            { icon: <FaLeaf />, label: "Blog", href: "/learn#blog", description: "Farm updates & tips" },
+            { icon: <FaLeaf />, label: "Blog", href: "#blog", description: "Farm updates & tips" },
             { icon: <FaLeaf />, label: "Recipes", href: "/learn#recipes", description: "Seasonal recipes" },
             { icon: <FaLeaf />, label: "Growing Guide", href: "/learn#guide", description: "Gardening tips" },
             { icon: <FaLeaf />, label: "FAQ", href: "/learn#faq", description: "Common questions" },
@@ -61,34 +61,28 @@ const Header: React.FC = () => {
         { label: "Products", href: "/products", hasDropdown: true },
         { label: "Visit", href: "/visit", hasDropdown: true },
         { label: "Learn", href: "/learn", hasDropdown: true },
-        { label: "Contact", href: "/contact" },
+        { label: "Contact", href: "#blog" },
     ];
 
     return (
         <header className="fixed top-0 left-0 w-full z-50 bg-white/95 backdrop-blur-sm border-b border-green/10 shadow-md">
             <div className="container mx-auto px-6 lg:px-15">
-                <div className="flex justify-between items-center py-4 lg:py-5">
+                <div className="flex justify-between items-center py-3 lg:py-4">
                     {/* Logo */}
                     <motion.a
                         href="/"
-                        className="flex items-center space-x-3 focus:outline-none cursor-pointer"
+                        className="focus:outline-none cursor-pointer shrink-0"
                         initial={{ opacity: 0, x: -20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.5 }}
-                        whileHover={{ scale: 1.05 }}
+                        whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.95 }}
                     >
-                        <div className="flex items-center">
-                            <img 
-                                src="/blacclogo.jpg" 
-                                alt="Blacc Farms Logo"
-                                className="h-12 w-12 object-contain rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
-                            />
-                        </div>
-                        <div>
-                            <h1 className="text-2xl font-bold text-black tracking-tight">Blacc Farms</h1>
-                            <p className="text-xs text-green-700 font-semibold">Sustainable Organic Farming</p>
-                        </div>
+                        <img 
+                            src="/blaccfarmlogo1.png" 
+                            alt="Blacc Farms Logo"
+                            className="h-12 w-30 lg:h-20 lg:w-60 object-contain drop-shadow-xl hover:drop-shadow-3xl transition-all duration-300 brightness-110"
+                        />
                     </motion.a>
 
                     <nav className="hidden lg:flex items-center space-x-1">
@@ -171,13 +165,13 @@ const Header: React.FC = () => {
                             aria-label="Shopping Cart"
                         >
                             <FaShoppingCart className="text-xl" />
-                            <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
+                            <span className="absolute -top-2 -right-2 bg-green-800 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
                         </motion.button>
                         <motion.a
                             href="/shop"
                             whileHover={{ scale: 1.05 }}
                             whileTap={{ scale: 0.95 }}
-                            className="bg-green-800 hover:bg-green-900 text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
+                            className="bg-green-800 hover:bg-green-800 text-white px-6 py-2.5 rounded-full font-semibold transition-all duration-300 shadow-md hover:shadow-lg"
                         >
                             Shop Now
                         </motion.a>
@@ -250,7 +244,7 @@ const Header: React.FC = () => {
                                 <div className="pt-4 border-t border-green/10">
                                     <motion.a
                                         href="/shop"
-                                        className="w-full block text-center bg-green-800 hover:bg-green-900 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
+                                        className="w-full block text-center bg-green-800 hover:bg-green-800 text-white px-6 py-3 rounded-full font-semibold transition-all duration-300"
                                         whileTap={{ scale: 0.95 }}
                                     >
                                         Shop Now

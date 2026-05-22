@@ -107,7 +107,7 @@ const MobileColumn: React.FC<{ column: FooterColumn }> = ({ column }) => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative bg-green-800 border-t border-green/ text-white">
+    <footer id="blog" className="relative bg-green-800 border-t border-green/ text-white">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_left,rgba(135,169,107,0.04),transparent_50%)]" />
 
       <div className="container mx-auto px-6 lg:px-15 relative">

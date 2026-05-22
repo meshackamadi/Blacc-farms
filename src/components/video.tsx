@@ -75,7 +75,7 @@ const Video: React.FC = () => {
                   <motion.div
                     animate={{ scale: [1, 1.15, 1] }}
                     transition={{ duration: 2, repeat: Infinity }}
-                    className="bg-green-600 hover:bg-green-700 text-white p-8 rounded-full shadow-2xl transition-all duration-300 backdrop-blur-sm"
+                    className="bg-green-800 hover:bg-green-700 text-white p-8 rounded-full shadow-2xl transition-all duration-300 backdrop-blur-sm"
                   >
                     <Play size={56} fill="white" />
                   </motion.div>
@@ -176,7 +176,7 @@ const Video: React.FC = () => {
               href="/contact"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="bg-green-700 hover:bg-green-800 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg"
+              className="bg-green-800 hover:bg-green-800 text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 shadow-lg"
             >
               Schedule a Tour
             </motion.a>
